@@ -1,4 +1,4 @@
-package tong0768.concurrency;
+package tong0768.concurrency.course.work;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -6,6 +6,9 @@ public class WarehouseSafe implements Warehouse {
 
     private int inventorySize = 0;
     private CountDownLatch latch;
+
+    private Boolean lock1 = true;
+    private Boolean lock2 = true;
 
     public WarehouseSafe(CountDownLatch latch) {
         this.latch = latch;

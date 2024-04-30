@@ -1,4 +1,4 @@
-package tong0768.concurrency;
+package tong0768.concurrency.course.work;
 
 public interface Warehouse {
     void add();

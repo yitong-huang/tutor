@@ -1,7 +1,6 @@
-package tong0768.concurrency;
+package tong0768.concurrency.course.work;
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author tong0768
@@ -25,10 +24,10 @@ public class InventoryMain {
             System.out.println("not a valid number");
         }
 
-//        CountDownLatch latch = new CountDownLatch(addThreadNum + removeThreadNum);
-//        Warehouse warehouse = new WarehouseSafe(latch);
+        CountDownLatch latch = new CountDownLatch(addThreadNum + removeThreadNum);
+        Warehouse warehouse = new WarehouseSafe(latch);
 
-        Warehouse warehouse = new WarehouseUnsafe();
+//        Warehouse warehouse = new WarehouseUnsafe();
 
         for (int i = 0; i < addThreadNum; i++) {
             new AddThread(warehouse).start();
@@ -39,9 +38,9 @@ public class InventoryMain {
             new RemoveThread(warehouse).start();
         }
 
-//        latch.await();
+        latch.await();
 
-        TimeUnit.SECONDS.sleep(1);
+//        TimeUnit.SECONDS.sleep(1);
         System.out.println("Final Inventory size = " + warehouse.getInventorySize());
 
     }
