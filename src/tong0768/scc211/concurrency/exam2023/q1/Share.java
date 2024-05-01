@@ -6,6 +6,8 @@ public class Share {
 
     public synchronized void add() {
         num++;
+        // temp = num + 1;
+        // num = temp;
     }
 
     public int getNum() {
