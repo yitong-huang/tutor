@@ -1,4 +1,4 @@
-package tong0768.concurrency.exam2023.q1;
+package tong0768.scc211.concurrency.exam2023.q1;
 
 public class AddThread extends Thread {
 

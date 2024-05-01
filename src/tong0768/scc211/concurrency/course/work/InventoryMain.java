@@ -1,4 +1,4 @@
-package tong0768.concurrency.course.work;
+package tong0768.scc211.concurrency.course.work;
 
 import java.util.concurrent.CountDownLatch;
 

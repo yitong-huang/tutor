@@ -1,4 +1,4 @@
-package tong0768.concurrency.basic;
+package tong0768.scc211.concurrency.basic;
 
 public class BThread implements Runnable {
     @Override

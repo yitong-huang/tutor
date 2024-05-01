@@ -1,4 +1,4 @@
-package tong0768.concurrency.exam2023.q1;
+package tong0768.scc211.concurrency.exam2023.q1;
 
 public class Peterson implements Runnable {
 
@@ -30,8 +30,7 @@ public class Peterson implements Runnable {
     }
 
     void releaseLock() {
-        int self = this.id;
-        interested[self] = false;
+        interested[this.id] = false;
     }
 
     public static void main(String[] args) {
