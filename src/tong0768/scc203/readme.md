@@ -1,3 +1,34 @@
+## 重点
+
+### TCP
+
+* TCP与UDP的区别
+* TCP拥塞控制
+* 三次握手
+
+### HTTP
+
+* 请求、响应结构
+* Cache（Last-modified）
+* HTTP是基于TCP
+* status code 200，404
+
+### 路由算法
+
+* Dijkstra’s
+* Bellman-Ford
+
+### Checksum
+
+* Two-dimensional parity
+* CRC
+
+### DNS
+
+### Autonomous Systems (AS)
+
+### 五层结构
+
 ## 什么是互联网
 
 ### 基本构成 W1L1.p5
