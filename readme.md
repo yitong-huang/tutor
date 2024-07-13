@@ -2,7 +2,8 @@
 
 ### inst0007 Web Tech
 
-
+* #### [Getting Started](./src/tong0768/inst0007/_01GettingStarted/GettingStarted.md)
+* #### [Creating Web Pages](./src/tong0768/inst0007/_02CreatingWebPages/CreatingWebPages.md)
 
 ### scc202 database
 
