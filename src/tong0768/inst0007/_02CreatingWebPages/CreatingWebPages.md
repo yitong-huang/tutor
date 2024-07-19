@@ -219,14 +219,14 @@ value=10
 <ul>
     <li>Bell</li>
     <li>Chile</li>
-        <li>
-            <ul>
+    <li>
+        <ul>
             <li>Serrano</li>
             <li>Jalapeno</li>
             <li>Habanero</li>
             <li>Anaheim</li>
-            </ul>
-        </li>
+        </ul>
+    </li>
     <li>Szechuan</li>
     <li>Cayenne</li>
 </ul>
