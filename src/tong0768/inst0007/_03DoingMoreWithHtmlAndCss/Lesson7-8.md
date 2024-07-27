@@ -104,14 +104,14 @@
 ### 引入style sheets
 * ```<style>``` page-level
 ```html
-<style type="text/css">
+<style">
 h1 { font-size: x-large; font-weight: bold; }
 h2 { font-size: large; font-weight: bold; }
 </style>
 ```
 * ```<link>``` site-wide  
 ```html
-<link rel="stylesheet" href="styles.css" type="text/css" >
+<link rel="stylesheet" href="css/MyStyle.css" type="text/css" >
 ```
 
 ### CSS语法
@@ -155,3 +155,12 @@ then you write the rule like this
 ### 长度单位
 
 ### 颜色
+
+---
+
+### Links
+
+### The Box Model
+
+### &lt;body&gt; tag
+

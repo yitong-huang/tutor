@@ -15,3 +15,20 @@ em {
 h3 {
     font-size: 16px
 }
+
+a:link { color: green }
+a:active { color: red }
+a:visited { color: yellow }
+a:hover { color: blue }
+
+#a img {
+    border: none
+}
+
+#a img:hover {
+    border: 10px solid black;
+}
+
+#smallImage {
+    width: 50px
+}
