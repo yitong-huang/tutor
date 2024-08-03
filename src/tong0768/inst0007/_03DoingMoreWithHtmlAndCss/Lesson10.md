@@ -34,7 +34,7 @@
 
 #### &lt;th&gt;
 
-table heading cells
+table heading cells 表头单元格，默认粗体
 
 #### &lt;td&gt;
 
@@ -77,3 +77,15 @@ table data cells
 ### Captions
 
 ### Style
+
+#### table width
+
+#### border
+
+#### column width
+
+#### table and cell color
+
+#### span rows and columns
+
+![](img/span.png)

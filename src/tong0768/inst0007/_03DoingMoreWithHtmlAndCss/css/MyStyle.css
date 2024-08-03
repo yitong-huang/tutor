@@ -32,3 +32,27 @@ a:hover { color: blue }
 #smallImage {
     width: 50px
 }
+
+/*
+div {
+    background-image: url("../img/HtmlCssJs.png");
+}
+*/
+
+
+.MySheet {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+/*
+td, th {
+    height: 100px;
+}
+*/
+
+

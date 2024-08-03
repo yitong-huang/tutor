@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/MyStyle.css" type="text/css">
 </head>
 <body>
-<table border="1">
-    <caption>Vital Statistics</caption>
+
+<h1>Simple Table Example</h1>
+
+<table border="10">
+    <caption>hello world</caption>
     <tr>
-        <th>Name</th>
+        <th colspan="2">Name</th>
         <th>Height</th>
-        <th>Weight</th>
-        <th>Eye Color</th>
     </tr>
     <tr>
         <td>Alison</td>
-        <td>5'4"</td>
-        <td>140</td>
-        <td>Blue</td>
+        <td>Li</td>
+        <td>160</td>
     </tr>
     <tr>
-        <td>Tom</td>
-        <td>6'0"</td>
-        <td>165</td>
-        <td>Hazel</td>
-    </tr>
-    <tr>
-        <td>Susan</td>
-        <td>5'1"</td>
-        <td>97</td>
-        <td>Brown</td>
+        <td>tong</td>
+        <td>Huang</td>
+        <td>180</td>
     </tr>
 </table>
+
+<h1>Table Caption Example</h1>
 
 <table border="1">
     <caption>Vital Statistics</caption>
@@ -61,10 +57,14 @@
     </tr>
 </table>
 
+<h1>Detail Example</h1>
+
 <details>
     <summary>Vital Statistics</summary>
     <p>This table includes the name, height, and, weight of various employees.</p>
 </details>
+
+<h1>Detailed Table Example</h1>
 
 <table border="1">
     <caption>
@@ -96,6 +96,217 @@
         <td></td>
         <td>97</td>
         <td>Brown</td>
+    </tr>
+</table>
+
+<h1>Table Width</h1>
+
+<table border="1" style="width: 100%">
+    <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Eye Color</th>
+    </tr>
+    <tr>
+        <td>Alison</td>
+        <td>5'4"</td>
+        <td>140</td>
+        <td>Blue</td>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>6'0"</td>
+        <td>165</td>
+        <td>Hazel</td>
+    </tr>
+    <tr>
+        <td>Susan</td>
+        <td></td>
+        <td>97</td>
+        <td>Brown</td>
+    </tr>
+</table>
+
+<h1>Column Width</h1>
+
+<h3>set width to head cells</h3>
+
+<table border="1" style="width:100%;">
+    <tr>
+        <th style="width:40%">Name</th>
+        <th style="width:20%">Height</th>
+        <th style="width:20%">Weight</th>
+        <th style="width:20%">Eye Color</th>
+    </tr>
+    <tr>
+        <td>Alison</td>
+        <td>5'4"</td>
+        <td>140</td>
+        <td>Blue</td>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>6'0"</td>
+        <td>165</td>
+        <td>Hazel</td>
+    </tr>
+    <tr>
+        <td>Susan</td>
+        <td></td>
+        <td>97</td>
+        <td>Brown</td>
+    </tr>
+</table>
+
+<h3>set width to data cells</h3>
+
+<table border="1" style="width:100%;">
+    <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Eye Color</th>
+    </tr>
+    <tr>
+        <td style="width:40%">Alison</td>
+        <td style="width:20%">5'4"</td>
+        <td style="width:20%">140</td>
+        <td style="width:20%">Blue</td>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>6'0"</td>
+        <td>165</td>
+        <td>Hazel</td>
+    </tr>
+    <tr>
+        <td>Susan</td>
+        <td></td>
+        <td>97</td>
+        <td>Brown</td>
+    </tr>
+</table>
+
+<h1>Table Border</h1>
+
+<table class="MySheet" style="width:100%;">
+    <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Eye Color</th>
+    </tr>
+    <tr>
+        <td>Alison</td>
+        <td>5'4"</td>
+        <td>140</td>
+        <td>Blue</td>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>6'0"</td>
+        <td>165</td>
+        <td>Hazel</td>
+    </tr>
+    <tr>
+        <td>Susan</td>
+        <td></td>
+        <td>97</td>
+        <td>Brown</td>
+    </tr>
+</table>
+
+<h3>set table and cell color</h3>
+
+<table border="1" style="width:100%; background-color: red">
+    <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Eye Color</th>
+    </tr>
+    <tr>
+        <td style="width:40%">Alison</td>
+        <td style="width:20%">5'4"</td>
+        <td style="width:20%; background-color: yellow">140</td>
+        <td style="width:20%">Blue</td>
+    </tr>
+    <tr>
+        <td style="background-color: yellow">Tom</td>
+        <td>6'0"</td>
+        <td>165</td>
+        <td>Hazel</td>
+    </tr>
+    <tr>
+        <td>Susan</td>
+        <td></td>
+        <td>97</td>
+        <td>Brown</td>
+    </tr>
+</table>
+
+<h3>Cell align</h3>
+
+<table border="1" style="width: 100%;">
+    <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Eye Color</th>
+    </tr>
+    <tr>
+        <td style="text-align: left; vertical-align: top">Alison</td>
+        <td style="text-align: center; vertical-align: top">5'4"</td>
+        <td style="text-align: right; vertical-align: top">140</td>
+        <td>Blue</td>
+    </tr>
+    <tr>
+        <td style="text-align: left; vertical-align: center">Tom</td>
+        <td style="text-align: center; vertical-align: center">6'0"</td>
+        <td style="text-align: right; vertical-align: center">165</td>
+        <td>Hazel</td>
+    </tr>
+    <tr>
+        <td style="text-align: left; vertical-align: bottom">Susan</td>
+        <td style="text-align: center; vertical-align: bottom">5'5"</td>
+        <td style="text-align: right; vertical-align: bottom">97</td>
+        <td>Brown</td>
+    </tr>
+</table>
+
+<h3>Column span</h3>
+
+<table border="1">
+    <tr>
+        <th colspan="2" style="background-color: yellow">Gender</th>
+    </tr>
+    <tr>
+        <th>Male</th>
+        <th>Female</th>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>23</td>
+    </tr>
+</table>
+
+<h3>Column and row span</h3>
+
+<table border="1">
+    <tr>
+        <th colspan="2"> </th>
+        <th>Ring<br />
+            Clearance</th>
+    </tr>
+    <tr style="text-align: center;">
+        <th rowspan="2">Piston</th>
+        <th>Upper</th>
+        <td>3mm</td>
+    </tr>
+    <tr style="text-align: center;">
+        <th>Lower</th>
+        <td>3.2mm</td>
     </tr>
 </table>
 
