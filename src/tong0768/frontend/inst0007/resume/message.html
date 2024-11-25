@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>名字 Profile - ABOUT</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="cv.css">
+    <script type="text/javascript" src="cv.js"></script>
+</head>
+
+<body>
+    <div class="head">
+        <nav class="head-nav">
+            <a href="about.html"><button class="head-nav-item head-nav-item-inactive">ABOUT</button></a>
+            <a href="reference.html"><button class="head-nav-item head-nav-item-inactive">REFERENCE</button></a>
+            <a href="message.html"><button class="head-nav-item">MESSAGE</button></a>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="main-left">
+            <div class="card">
+                <div>
+                    <img id="avatar" src="avatar.jpg">
+                </div>
+                <div>
+                    <p id="name">Yitong HUANG</p>
+                </div>
+                <hr>
+                <div class="card-intro">
+                    <img src="phone.png" class="intro-icon"><div class="intro-text">+86-18026932735</div>
+                </div>
+                <div class="card-intro">
+                    <img src="email.png" class="intro-icon"><div class="intro-text">yitong0768@gmail.com</div>
+                </div>
+                <div class="card-intro">
+                    <img src="location.png" class="intro-icon">
+                    <div class="intro-text">xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="card">
+                <p class="card-title">Yitong</p>
+                <p>Hi, you are welcome to leave a message here</p>
+            </div>
+            
+            <div class="card" id="comment-card">
+                <form>
+                    <textarea id="comment-input" placeholder="Message please"></textarea>
+                    <input type="text" id="name-input" placeholder="Your name please">
+                    <input type="button" id="submit-button" value="Submit" onclick="submitComment()">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

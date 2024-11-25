@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Function</title>
+</head>
+<body>
+
+<h1>Function Event</h1>
+
+<script>
+
+    function f(r, PI) {
+        var s = PI * r * r;
+        return s;
+    }
+
+
+    // 定义一个函数，需要一个参数，根据参数alert
+    // 字符串 str.length
+
+    // 定义一个函数，计算最大公约数
+    function gcd(m, n) {
+
+        // 1. 得到两个数中小的数
+        var s;
+        // 条件语句
+        if (m > n) {
+            s = n
+        } else {
+            s = m;
+        }
+
+        // 从1循环到小的数，如果这个数能同时被m和n整除，则记录下来
+        // i++   i=i+1
+        // i--   i=i-1
+        // break; continue;
+        var num = 1
+        for (var i = 1; i <= s; i++) {
+            if (m % i == 0 && n % i == 0) {
+                num = i;
+            }
+        }
+
+        // 返回这个数
+        return num;
+    }
+
+    console.log(gcd(4, 13))
+
+
+</script>
+
+
+</body>
+</html>

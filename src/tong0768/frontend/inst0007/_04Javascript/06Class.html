@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class</title>
+</head>
+<body>
+
+<h1>Class</h1>
+
+<script>
+
+    // 继承
+    // 父类
+    class Animal {
+        constructor(n) {
+            this.name = n
+        }
+        eat() {
+            console.log("eat")
+        }
+        sleep() {
+            console.log("sleep")
+        }
+    }
+
+// 子类
+    class Dog extends Animal {
+        constructor(n, age) {
+            super(n)
+            this.age = age
+        }
+        bark() {
+            console.log(this.name + " bark")
+        }
+    }
+
+    class Cat extends Animal {
+        constructor(n, age) {
+            super(n)
+            this.age = age
+        }
+        zhuasha() {
+            console.log("zhuasha")
+        }
+    }
+
+
+    var d = new Dog("kk", 15);
+    d.eat()
+    d.sleep()
+    d.bark()
+    var c = new Cat();
+    c.eat()
+    c.sleep()
+    c.zhuasha()
+
+// 面向对象编程
+// 定义一个类 Car
+    class Car {
+
+        // 构造方法
+        constructor(b, t, y, w) {
+            this.brand = b;
+            this.type = t;
+            this.year = y;
+            this.wheel = w;
+        }
+
+        // 其他方法
+        drive(speed) {
+            // ...
+            console.log("drive a " + this.brand + " in " + speed + "km/h");
+            this.wheel.print();
+        }
+
+        //
+        wash() {
+            console.log("wash a " + this.brand);
+            return 0;
+        }
+    }
+
+    class Wheel {
+        constructor(b) {
+            this.brand = b;
+        }
+        print() {
+            console.log(this.brand);
+        }
+    }
+
+    var w = new Wheel("Mi");
+    var myCar1 = new Car("benz", "E", 2024, w);
+    myCar1.drive(80);
+
+    var p = "asdf";
+
+    var person = {
+        firstName: "Huang",
+        lastName: "yitong",
+        age: 30
+    }
+
+    console.log(person.firstName)
+
+    class Simple {
+        constructor() {
+            this.num = 1;
+        }
+        print() {
+            console.log(this.num);
+        }
+    }
+
+// class类  object对象  老师  -》 类   黄老师 -》 对象
+
+// 锚 -》 类   kk -》 对象
+    var s = new Simple();
+    s.print();
+
+</script>
+
+</body>
+</html>
