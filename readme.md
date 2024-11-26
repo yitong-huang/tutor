@@ -1,30 +1,32 @@
 ## Courses
 
-### inst0007 Web Tech
+### Web Tech frontend inst0007
 
-* #### [Getting Started](./src/tong0768/frontend/inst0007/_01GettingStarted/GettingStarted.md)
-* #### [Creating Web Pages](./src/tong0768/frontend/inst0007/_02CreatingWebPages/CreatingWebPages.md)
+* #### [Getting Started](tong0768/frontend/inst0007/_01GettingStarted/GettingStarted.md)
+* #### [Creating Web Pages](tong0768/frontend/inst0007/_02CreatingWebPages/CreatingWebPages.md)
 
-### scc202 database
+### database scc202
 
-* #### [normal forms](./src/tong0768/database/scc201/normalForms/readme.md)
-* #### [schema](./src/tong0768/database/scc201/schema/readme.md)
-* #### [sql](./src/tong0768/database/scc201/sql/readme.md)
-* #### [index](./src/tong0768/database/scc201/index/readme.md)
-* #### [transaction](./src/tong0768/database/scc201/transaction/readme.md)
+* #### [normal forms](tong0768/database/scc201/normalForms/readme.md)
+* #### [schema](tong0768/database/scc201/schema/readme.md)
+* #### [sql](tong0768/database/scc201/sql/readme.md)
+* #### [index](tong0768/database/scc201/index/readme.md)
+* #### [transaction](tong0768/database/scc201/transaction/readme.md)
 
-### scc203 network
+### network scc203
 
-* #### [all](./src/tong0768/network/scc203/readme.md)
+* #### [all](tong0768/network/scc203/readme.md)
 
-### scc211 operation
+### operation scc211
 
-* #### [Concurrency](./src/tong0768/operation/scc211/concurrency)
-* #### [Memory](./src/tong0768/operation/scc211/memory/readme.md)
-* #### [CPU schedule](./src/tong0768/operation/scc211/schedule/readme.md)
-* #### [File](./src/tong0768/operation/scc211/file/readme.md)
+* #### [Concurrency](tong0768/operation/scc211/concurrency)
+* #### [Memory](tong0768/operation/scc211/memory/readme.md)
+* #### [CPU schedule](tong0768/operation/scc211/schedule/readme.md)
+* #### [File](tong0768/operation/scc211/file/readme.md)
+
+### python Comp9021
 
 ## contact
 
 #### email: yitong0768@gmail.com
-#### wx: tong0768 / 18026932735
+#### wechat: tong0768 / 18026932735

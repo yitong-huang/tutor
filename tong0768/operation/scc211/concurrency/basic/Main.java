@@ -1,4 +1,4 @@
-package tong0768.operation.scc211.concurrency.basic;
+package operation.scc211.concurrency.basic;
 
 public class Main {
 
