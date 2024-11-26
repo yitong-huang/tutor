@@ -1,5 +1,6 @@
 package operation.scc211.concurrency.basic;
 
+@SuppressWarnings("InfiniteLoopStatement")
 public class Main {
 
     // 主线程 竞争CPU

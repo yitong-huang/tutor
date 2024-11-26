@@ -3,7 +3,7 @@ package operation.scc211.concurrency.exam2023.q1;
 public class Peterson implements Runnable {
 
     static int tiebreak = 0;
-    static boolean[] interested = {false, false};
+    static final boolean[] interested = {false, false};
 
     private final int id;
 

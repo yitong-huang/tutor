@@ -1,5 +1,6 @@
 package operation.scc211.concurrency.course.work;
 
+@SuppressWarnings("unused")
 public class WarehouseUnsafe implements Warehouse {
 
     private int inventorySize = 0;

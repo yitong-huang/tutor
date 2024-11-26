@@ -1,15 +1,14 @@
 import random
 from profession import *
 
-
 # Extra exp rate
 EXTRAEXP1 = 1.2
 EXTRAEXP2 = 1.5
 
+
 class Unit:
-    
-    
-    # Initializes all the attribute of an unit
+
+    # Initializes all the attribute of a unit
     def __init__(self):
         self.__name = ''
         self.__profession = Profession.UNKNOWN
@@ -21,7 +20,6 @@ class Unit:
         self.__rank = 1
         self.__group = ''
 
-    
     def __init__(self, name, profession):
         self.__name = name
         self.__profession = profession
@@ -32,7 +30,6 @@ class Unit:
         self.__exp = 0
         self.__rank = 1
         self.__group = ''
-    
 
     # Set name, get name
     def setName(self, name):
@@ -40,7 +37,6 @@ class Unit:
 
     def getName(self):
         return self.__name
-
 
     # Set profession, get profession, setup warrior, setup tanker
     def setProfession(self, profession):
@@ -51,21 +47,19 @@ class Unit:
         return self.__profession
 
     def setupWarrior(self):
-        self.__attack = random.randint(5,20)
-        self.__defence = random.randint(1,10)
+        self.__attack = random.randint(5, 20)
+        self.__defence = random.randint(1, 10)
 
     def setupTanker(self):
-        self.__attack = random.randint(1,10)
-        self.__defence = random.randint(5,15)
+        self.__attack = random.randint(1, 10)
+        self.__defence = random.randint(5, 15)
 
-    
     # Set max hp, get max hp
     def setMaxHp(self, maxHp):
         self.__maxHp = maxHp
 
     def getMaxHp(self):
         return self.__maxHp
-    
 
     # Set current hp, take damage, healing, get current hp
     def setCurrentHp(self, currentHp):
@@ -73,7 +67,7 @@ class Unit:
 
     def damage(self, target):
         # Calculate the damage and update hp
-        damage = self.__attack - target.__defence + random.randint(-5,10)
+        damage = self.__attack - target.__defence + random.randint(-5, 10)
         target.__currentHp -= damage
         if target.__currentHp > target.__maxHp:
             target.__currentHp = target.__maxHp
@@ -88,7 +82,7 @@ class Unit:
             target.__exp += int(target.__defence * EXTRAEXP2)
         else:
             target.__exp += target.__defence
-        
+
         return damage
 
     def heal(self, healing):
@@ -98,7 +92,6 @@ class Unit:
 
     def getCurrentHp(self):
         return self.__currentHp
-    
 
     # Set attack ,get attack
     def setAttack(self, attack):
@@ -107,25 +100,22 @@ class Unit:
     def getAttack(self):
         return self.__attack
 
-
     # Set defence, get defence
     def setDefence(self, defence):
         self.__defence = defence
 
     def getDefence(self):
         return self.__defence
-        
 
     # Set exp, add exp, get exp
     def setExp(self, exp):
         self.__exp = exp
 
-    def addExp(self,amount):
+    def addExp(self, amount):
         self.__exp += amount
-    
+
     def getExp(self):
         return self.__exp
-
 
     # Set rank, get rank
     def setRank(self, rank):
@@ -144,7 +134,6 @@ class Unit:
     def getRank(self):
         return self.__rank
 
-
     # Set group, get group
     def setGroup(self, group):
         self.__group = group
@@ -155,10 +144,6 @@ class Unit:
     # Display the state of an unit
     def __str__(self):
         string = "{}\t{}  \t {}\t{}\t{}\t{}\t{}"
-        string = string.format(self.__name, self.__profession, self.__currentHp, self.__attack, self.__defence, self.__exp, self.__rank)
+        string = string.format(self.__name, self.__profession, self.__currentHp, self.__attack, self.__defence,
+                               self.__exp, self.__rank)
         return string
-
-
-
-
-

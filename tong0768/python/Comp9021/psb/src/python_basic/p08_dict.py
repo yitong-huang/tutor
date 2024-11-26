@@ -1,6 +1,6 @@
 simple_dict = {'huang': 'yitong', 1: 'test'}
 simple_dict['hello'] = 'world'
-# 输出键为'hello' 的值
+# 输出键为hello的值
 print(simple_dict['hello'])
 # 输出键为 1 的值
 print(simple_dict[1])

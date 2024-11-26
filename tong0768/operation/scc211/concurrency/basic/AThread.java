@@ -1,5 +1,6 @@
 package operation.scc211.concurrency.basic;
 
+@SuppressWarnings("InfiniteLoopStatement")
 public class AThread extends Thread {
 
     @Override

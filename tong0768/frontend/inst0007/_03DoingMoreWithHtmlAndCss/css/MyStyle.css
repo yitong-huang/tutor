@@ -29,7 +29,11 @@ a:hover { color: blue }
     border: 10px solid black;
 }
 
-#smallImage {
+#smallImage1 {
+    width: 50px
+}
+
+#smallImage2 {
     width: 50px
 }
 

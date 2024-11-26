@@ -44,14 +44,6 @@ Referential Integrity:
 Character表中的外键playerID是Player表的主键  
 Inventory表中的外键characterID是Character表的主键
 
-
-asdfasd
-
-a
-asdf
-
-
-
 π_CharName(Characters ⨝_A.AccountNo=Players.AccountNo (Players ∣ email[email LIKE '%@example.com']))
 
 
