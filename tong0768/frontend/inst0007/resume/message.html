@@ -43,14 +43,17 @@
                 <p class="card-title">Yitong</p>
                 <p>Hi, you are welcome to leave a message here</p>
             </div>
-            
+
             <div class="card" id="comment-card">
+<!--                <form action="mailto:yitong0768@gmail.com" enctype="text/plain">-->
                 <form>
-                    <label for="comment-input"></label><textarea id="comment-input" placeholder="Message please"></textarea>
-                    <label for="name-input"></label><input type="text" id="name-input" placeholder="Your name please">
+                    <input type="text" name="subject" value="Message From CV Page" hidden="hidden">
+                    <textarea id="comment-input" name="body" placeholder="Message please"></textarea>
+                    <input type="text" id="name-input" placeholder="Your name please">
                     <input type="button" id="submit-button" value="Submit" onclick="submitComment()">
                 </form>
             </div>
+
         </div>
     </div>
 </body>

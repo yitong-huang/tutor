@@ -11,6 +11,19 @@ function submitComment() {
         return;
     }
 
+    // Ajax
+    const request = new XMLHttpRequest();
+    const url = "http://8.208.28.18:8800?name=" + encodeURIComponent(name) + "&comment=" + encodeURIComponent(comment)
+    request.open("GET", url);
+    request.send();
+    request.onloadend = (e) => {
+        if (request.status == 200) {
+            alert(request.responseText)
+        } else {
+            alert("Oops, something wrong with the server")
+        }
+    }
+
     var card = document.createElement("div");
     card.setAttribute("class", "card") 
     
@@ -26,4 +39,8 @@ function submitComment() {
     var commentCard = document.getElementById("comment-card");
 
     document.getElementsByClassName("main-right")[0].insertBefore(card, commentCard);
-}
+
+    // var subject = name + " Leave Message On Your Page";
+    // var url = "mailto:yitong0768@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(comment);
+    // window.open(url)
+} 

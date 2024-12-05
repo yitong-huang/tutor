@@ -2,6 +2,11 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.idea
+
+##node
+**/node_modules/
+**/package-lock.json
 
 ### Eclipse ###
 .apt_generated
