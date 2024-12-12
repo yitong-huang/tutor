@@ -13,7 +13,7 @@ function submitComment() {
 
     // Ajax
     const request = new XMLHttpRequest();
-    const url = "http://8.208.28.18:8800?name=" + encodeURIComponent(name) + "&comment=" + encodeURIComponent(comment)
+    const url = "https://inst0007.2fish.com.cn/sendmail?name=" + encodeURIComponent(name) + "&comment=" + encodeURIComponent(comment)
     request.open("GET", url);
     request.send();
     request.onloadend = (e) => {
