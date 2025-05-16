@@ -1,0 +1,912 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37025,        904]
+NotebookOptionsPosition[     31540,        813]
+NotebookOutlinePosition[     31963,        830]
+CellTagsIndexPosition[     31920,        827]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MSIN0180: Assignment 1", "Title",
+ CellChangeTimes->{{3.6303960903152103`*^9, 3.6303961131763372`*^9}, {
+  3.6306774513514633`*^9, 3.630677455325653*^9}, {3.882872552908917*^9, 
+  3.882872555484107*^9}, {3.915425996917521*^9, 
+  3.915426000439869*^9}},ExpressionUUID->"44629f3d-e57c-4c04-a7f2-\
+0438f45a1cb0"],
+
+Cell[TextData[{
+ StyleBox["MSIN0180 Quantitative Methods for Business\nAssignment 1: Applied \
+Calculus(2023/2024)\n",
+  FontWeight->"Bold"],
+ "\n",
+ StyleBox["Instructions",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.630677536166752*^9, 3.630677997884801*^9}, {
+   3.6306785957955*^9, 3.6306785968831587`*^9}, 3.662044406523876*^9, {
+   3.662044825422537*^9, 3.662044852668244*^9}, {3.6621199813203793`*^9, 
+   3.662120039808238*^9}, {3.6933949111336*^9, 3.693394914651033*^9}, {
+   3.724577877531691*^9, 3.724577911402351*^9}, {3.7248321554997187`*^9, 
+   3.7248321658210278`*^9}, {3.724832196289105*^9, 3.724832197281556*^9}, {
+   3.724832247498557*^9, 3.7248323295430393`*^9}, {3.724835142719902*^9, 
+   3.7248351442393093`*^9}, {3.8828725590875797`*^9, 3.882872588059655*^9}, {
+   3.8828726345152273`*^9, 3.8828726459133863`*^9}, {3.915426006279565*^9, 
+   3.9154260485188093`*^9}, {3.915426115058792*^9, 
+   3.915426150600257*^9}},ExpressionUUID->"3f2ab1c4-62cf-4282-8069-\
+2338ebb5d0ad"],
+
+Cell[TextData[{
+ "Type up all your answers in this ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " notebook."
+}], "Item",
+ CellChangeTimes->{{3.630677536166752*^9, 3.630677997884801*^9}, {
+   3.6306785957955*^9, 3.6306785968831587`*^9}, 3.662044406523876*^9, {
+   3.662044825422537*^9, 3.662044852668244*^9}, {3.6621199813203793`*^9, 
+   3.662120039808238*^9}, {3.6933949111336*^9, 3.693394914651033*^9}, {
+   3.724577877531691*^9, 3.724577911402351*^9}, {3.7248321554997187`*^9, 
+   3.7248321658210278`*^9}, {3.724832196289105*^9, 3.724832197281556*^9}, {
+   3.724832247498557*^9, 3.7248323295430393`*^9}, {3.724835142719902*^9, 
+   3.7248351442393093`*^9}, {3.8828725590875797`*^9, 3.882872588059655*^9}, {
+   3.8828726345152273`*^9, 3.8828726459133863`*^9}, {3.915426006279565*^9, 
+   3.9154260485188093`*^9}, {3.915426115058792*^9, 3.915426155615288*^9}, {
+   3.915595640388019*^9, 
+   3.915595641828224*^9}},ExpressionUUID->"9886ea46-a1fc-4901-95d0-\
+e9517e3a5750"],
+
+Cell[TextData[{
+ "Unless otherwise directed, for all questions answer the question twice: (1) \
+first showing all your workings as you would write them under exam \
+conditions; and (2) then using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " code to solve the problem."
+}], "Item",
+ CellChangeTimes->{{3.630677536166752*^9, 3.630677997884801*^9}, {
+   3.6306785957955*^9, 3.6306785968831587`*^9}, 3.662044406523876*^9, {
+   3.662044825422537*^9, 3.662044852668244*^9}, {3.6621199813203793`*^9, 
+   3.662120039808238*^9}, {3.6933949111336*^9, 3.693394914651033*^9}, {
+   3.724577877531691*^9, 3.724577911402351*^9}, {3.7248321554997187`*^9, 
+   3.7248321658210278`*^9}, {3.724832196289105*^9, 3.724832197281556*^9}, {
+   3.724832247498557*^9, 3.7248323295430393`*^9}, {3.724835142719902*^9, 
+   3.7248351442393093`*^9}, {3.8828725590875797`*^9, 3.882872588059655*^9}, {
+   3.8828726345152273`*^9, 3.8828726459133863`*^9}, {3.915426006279565*^9, 
+   3.9154260485188093`*^9}, {3.915426115058792*^9, 3.915426408216702*^9}, {
+   3.9154264632868643`*^9, 3.9154264734178743`*^9}, {3.9154265272493267`*^9, 
+   3.91542655265436*^9}, {3.915453263548353*^9, 
+   3.91545328017078*^9}},ExpressionUUID->"2a2a4bad-4e71-4df6-a87e-\
+cefccc4971b9"],
+
+Cell[TextData[{
+ "For your part (1) \[OpenCurlyDoubleQuote]Exam\[CloseCurlyDoubleQuote] \
+answers your workings must be entered in Text Cells, using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " only to enter and format mathematical text. Marks for your part (1) are \
+awarded for your intermediate workings rather than for your final solution."
+}], "Item",
+ CellChangeTimes->{{3.630677536166752*^9, 3.630677997884801*^9}, {
+   3.6306785957955*^9, 3.6306785968831587`*^9}, 3.662044406523876*^9, {
+   3.662044825422537*^9, 3.662044852668244*^9}, {3.6621199813203793`*^9, 
+   3.662120039808238*^9}, {3.6933949111336*^9, 3.693394914651033*^9}, {
+   3.724577877531691*^9, 3.724577911402351*^9}, {3.7248321554997187`*^9, 
+   3.7248321658210278`*^9}, {3.724832196289105*^9, 3.724832197281556*^9}, {
+   3.724832247498557*^9, 3.7248323295430393`*^9}, {3.724835142719902*^9, 
+   3.7248351442393093`*^9}, {3.8828725590875797`*^9, 3.882872588059655*^9}, {
+   3.8828726345152273`*^9, 3.8828726459133863`*^9}, {3.915426006279565*^9, 
+   3.9154260485188093`*^9}, {3.915426115058792*^9, 3.915426408216702*^9}, {
+   3.9154264632868643`*^9, 3.9154264734178743`*^9}, {3.9154265272493267`*^9, 
+   3.915426983393466*^9}},ExpressionUUID->"ff57b884-4ad4-4dc9-a527-\
+b3af20133c10"],
+
+Cell[TextData[{
+ "For your part (2) \[OpenCurlyDoubleQuote]Code\[CloseCurlyDoubleQuote] \
+answers your coded ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " solution must be entered in Input or Code Cells. Marks for part (2) are \
+awarded for code that outputs a correct final solution. You may use any ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " functions, either showing a sequence of coded steps or the use of a single \
+function to find the final solution. "
+}], "Item",
+ CellChangeTimes->{{3.630677536166752*^9, 3.630677997884801*^9}, {
+   3.6306785957955*^9, 3.6306785968831587`*^9}, 3.662044406523876*^9, {
+   3.662044825422537*^9, 3.662044852668244*^9}, {3.6621199813203793`*^9, 
+   3.662120039808238*^9}, {3.6933949111336*^9, 3.693394914651033*^9}, {
+   3.724577877531691*^9, 3.724577911402351*^9}, {3.7248321554997187`*^9, 
+   3.7248321658210278`*^9}, {3.724832196289105*^9, 3.724832197281556*^9}, {
+   3.724832247498557*^9, 3.7248323295430393`*^9}, {3.724835142719902*^9, 
+   3.7248351442393093`*^9}, {3.8828725590875797`*^9, 3.882872588059655*^9}, {
+   3.8828726345152273`*^9, 3.8828726459133863`*^9}, {3.915426006279565*^9, 
+   3.9154260485188093`*^9}, {3.915426115058792*^9, 3.915426408216702*^9}, {
+   3.9154264632868643`*^9, 3.9154264734178743`*^9}, {3.9154265272493267`*^9, 
+   3.915427420990638*^9}},ExpressionUUID->"157cd19d-d6b7-40b6-834b-\
+0f93dc3c9244"],
+
+Cell[TextData[{
+ " Once you have finished, ",
+ StyleBox["save this ",
+  FontWeight->"Bold"],
+ StyleBox["Mathematica",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[" document ",
+  FontWeight->"Bold"],
+ StyleBox["as a PDF",
+  FontWeight->"Bold",
+  FontVariations->{"Underline"->True}],
+ " (File>Save As or File>Print>PDF) and submit it to the Individual \
+Coursework 1 drop box on Moodle."
+}], "Item",
+ CellChangeTimes->{{3.630677536166752*^9, 3.630677997884801*^9}, {
+   3.6306785957955*^9, 3.6306785968831587`*^9}, 3.662044406523876*^9, {
+   3.662044825422537*^9, 3.662044852668244*^9}, {3.6621199813203793`*^9, 
+   3.662120039808238*^9}, {3.6933949111336*^9, 3.693394914651033*^9}, {
+   3.724577877531691*^9, 3.724577911402351*^9}, {3.7248321554997187`*^9, 
+   3.7248321658210278`*^9}, {3.724832196289105*^9, 3.724832197281556*^9}, {
+   3.724832247498557*^9, 3.7248323295430393`*^9}, {3.724835142719902*^9, 
+   3.7248351442393093`*^9}, {3.8828725590875797`*^9, 3.882872588059655*^9}, {
+   3.8828726345152273`*^9, 3.8828726459133863`*^9}, {3.915426006279565*^9, 
+   3.9154260485188093`*^9}, {3.915426115058792*^9, 3.915426408216702*^9}, {
+   3.9154264632868643`*^9, 3.915426468202362*^9}, {3.915427444133144*^9, 
+   3.9154274596064587`*^9}, {3.91559565079292*^9, 
+   3.915595657079576*^9}},ExpressionUUID->"71716d68-6d18-4a17-8505-\
+a4a4fdf867fa"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"83c8bfad-54b6-4a4c-862b-fb5d73766d05"],
+
+Cell[CellGroupData[{
+
+Cell["Question 1) ", "Section",
+ CellChangeTimes->{{3.630395861685361*^9, 3.630395867371891*^9}, {
+   3.63039599197572*^9, 3.630395993334382*^9}, {3.630399739700796*^9, 
+   3.630399764239839*^9}, {3.630403769931408*^9, 3.630403777249455*^9}, {
+   3.630409139400776*^9, 3.630409139657216*^9}, 3.63067808317043*^9, 
+   3.630678153012776*^9, {3.915427484252184*^9, 3.915427485757098*^9}, 
+   3.915600846369855*^9},ExpressionUUID->"6bff2a9e-65bf-41a2-9ad4-\
+fa0876802dd9"],
+
+Cell[TextData[{
+ StyleBox["[25 marks]",
+  FontWeight->"Bold"],
+ "\n\nA manager has allocated \[Sterling]120,000 to spend on market research \
+and advertisements of product A. It is estimated that if ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " "}], TraditionalForm]],ExpressionUUID->
+  "a95eb898-0e04-4e82-b8a3-6aaed2fa4b8c"],
+ "thousand pounds are spent on market research and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", " "}], TraditionalForm]],ExpressionUUID->
+  "1ebd2098-b5fd-4510-a945-d5c5f532952a"],
+ "thousand pounds are spent on advertisements, then approximately  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"x", ",", "y"}], ")"}], "=", 
+    RowBox[{
+     FractionBox["1", "1000"], 
+     SuperscriptBox["x", "3"], 
+     SuperscriptBox["y", "3"], " "}]}], TraditionalForm]],ExpressionUUID->
+  "7ca9cb6b-cb5e-4d33-af20-34d58ad9630b"],
+ " units of the product will be sold. \n\na.\tHow much money should the \
+manager allocate to market research and how much to advertisements in order \
+to maximise sales? Explain your answer. ",
+ StyleBox["[20 marks]",
+  FontWeight->"Bold"],
+ "\[LineSeparator]\nb.\tAssuming the manager only currently has allocated \
+\[Sterling]30,000 to market research and \[Sterling]60,000 to advertising, \
+use the gradient vector for sales (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Del]", "f"}], TraditionalForm]],ExpressionUUID->
+  "f5f015e8-803c-43fe-af7a-ff73abaf1416"],
+ ") to estimate the increase or decrease in unit sales if she increases \
+market research spend by \[Sterling]1,000 and decreases advertising by \
+\[Sterling]1,000. ",
+ StyleBox["[5 marks]",
+  FontWeight->"Bold"],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.630395946377358*^9, 3.630395954383842*^9}, {
+   3.630399795057693*^9, 3.630400019179974*^9}, {3.6304000692376537`*^9, 
+   3.6304001535208693`*^9}, {3.63067829614461*^9, 3.630678326278894*^9}, {
+   3.662044909937065*^9, 3.662045046258423*^9}, {3.6620453261638727`*^9, 
+   3.662045415409202*^9}, {3.66204591622348*^9, 3.662046019602119*^9}, {
+   3.662097914593377*^9, 3.662097915094658*^9}, {3.6933951627681437`*^9, 
+   3.693395509125024*^9}, {3.724578522716934*^9, 3.7245785937460423`*^9}, {
+   3.724579290394703*^9, 3.7245793052818193`*^9}, {3.724579443400236*^9, 
+   3.7245795223119392`*^9}, 3.724579613495357*^9, 3.882872731453197*^9, {
+   3.882873417523362*^9, 3.8828734246978207`*^9}, 3.915427794985511*^9, {
+   3.915427840047618*^9, 3.915427932189022*^9}, {3.915428021654381*^9, 
+   3.915428025073063*^9}, {3.915428847303521*^9, 3.915428851823999*^9}, {
+   3.915431205325975*^9, 3.91543146746113*^9}, {3.915431515741148*^9, 
+   3.9154315453246117`*^9}, 3.9154330617295227`*^9, {3.915447567675205*^9, 
+   3.915447583217115*^9}, 3.915551308994356*^9, {3.915600852558371*^9, 
+   3.9156009111524878`*^9}},ExpressionUUID->"d94b3f74-8f53-44df-b195-\
+d4cd7558dd61"],
+
+Cell[CellGroupData[{
+
+Cell["Exam Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915551319352785*^9, 
+  3.915551321084866*^9}},ExpressionUUID->"f2e3c1f2-ea64-4a8e-9122-\
+f6481d4fac79"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Text Cells",
+  FontWeight->"Bold"],
+ ", enter you answer below showing all your workings as you would in an \
+exam."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 
+  3.9154275789861383`*^9}},ExpressionUUID->"29d85c14-c376-455f-9b54-\
+3fe026f01fce"],
+
+Cell["a) ", "Text",
+ CellChangeTimes->{{3.915427980565889*^9, 3.9154279835612583`*^9}, {
+  3.915428027775633*^9, 3.9154280284489717`*^9}},
+ Background->RGBColor[
+  0.88, 1, 0.88],ExpressionUUID->"210fdc69-5ed7-40f0-8e08-3e357d91266f"],
+
+Cell["b) ", "Text",
+ CellChangeTimes->{{3.915427980565889*^9, 3.915427991752474*^9}, {
+  3.915428030218655*^9, 3.915428031664179*^9}},
+ Background->RGBColor[
+  0.88, 1, 0.88],ExpressionUUID->"ca0a5e99-3925-4b68-b154-bb5b3f0a286e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915427598960868*^9, 3.9154275995899143`*^9}, {3.915551325585318*^9, 
+  3.9155513267247877`*^9}},ExpressionUUID->"6416c9d0-045d-43e5-a1cf-\
+aac1b64237af"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Input",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["Code Cells",
+  FontWeight->"Bold"],
+ ", find the solution using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " code. Add more cells as required."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 3.915427641413836*^9}, {
+  3.915428074704742*^9, 
+  3.9154280825613194`*^9}},ExpressionUUID->"e51b74c7-2993-493e-95a1-\
+7c7d31cdb492"],
+
+Cell["a)", "Text",
+ CellChangeTimes->{{3.915428054263109*^9, 
+  3.915428054680464*^9}},ExpressionUUID->"188a065b-a0d2-479e-98e4-\
+deccbe6e5ca4"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.915428003409273*^9, 
+  3.9154280622027082`*^9}},ExpressionUUID->"7a362ea0-c0b5-403e-8161-\
+b41db0e70936"],
+
+Cell["b)", "Text",
+ CellChangeTimes->{{3.9154280592040367`*^9, 
+  3.91542805967557*^9}},ExpressionUUID->"78b9a82f-18ac-4964-9bd5-\
+05ef5bc3d590"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.915428003409273*^9, 
+  3.915428064731934*^9}},ExpressionUUID->"07a6e6db-3106-4b70-b475-\
+41163f96742e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 2)", "Section",
+ CellChangeTimes->{{3.630395861685361*^9, 3.630395867371891*^9}, {
+   3.63039599197572*^9, 3.630395993334382*^9}, {3.630399739700796*^9, 
+   3.630399764239839*^9}, {3.630403769931408*^9, 3.630403777249455*^9}, {
+   3.630409139400776*^9, 3.630409139657216*^9}, 3.63067808317043*^9, 
+   3.630678153012776*^9, {3.915427484252184*^9, 3.915427485757098*^9}, {
+   3.915450040294567*^9, 
+   3.915450040401857*^9}},ExpressionUUID->"899fa80a-6de2-46e5-89d4-\
+d337963d3629"],
+
+Cell[TextData[{
+ "\n",
+ StyleBox["[25 marks]",
+  FontWeight->"Bold"],
+ "\n\nA manager has estimated that if  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " "}], TraditionalForm]],ExpressionUUID->
+  "15b553ef-9daa-406c-ab08-cfe47e02402f"],
+ "thousand pounds are spent on development and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", " "}], TraditionalForm]],ExpressionUUID->
+  "b2f82e47-df04-4789-a947-7e0645ee959a"],
+ "thousand on promotion of Product B, approximately \[LineSeparator]\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"x", ",", "y"}], ")"}], "=", 
+    RowBox[{
+     RowBox[{"2", "x", " ", "y"}], "-", 
+     SuperscriptBox["x", "2"], "-", 
+     RowBox[{"2", 
+      SuperscriptBox["y", "2"]}], "+", 
+     RowBox[{"30", "x"}], "+", "4"}]}], TraditionalForm]],ExpressionUUID->
+  "2ca248db-fd60-4b83-8b63-50978b8761d2"],
+ "\:f35f\n\nmillion units of the product will be sold. \n\na) How much money \
+should the manager of the competing firm allocate to development and how much \
+to promotion of Product B in order to maximise sales? ",
+ StyleBox["[20 marks]",
+  FontWeight->"Bold"],
+ "\n\nb) In ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " plot the function ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],ExpressionUUID->
+  "cf20d05d-6930-41e1-86bc-5c7299e8c54f"],
+ " for values of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", ",", 
+    RowBox[{"y", "\[Element]", 
+     RowBox[{"[", 
+      RowBox[{"0", ",", "50"}], "]"}]}]}], TraditionalForm]],ExpressionUUID->
+  "e2841b8e-a9cd-4acf-905d-c57408108696"],
+ ", showing contour lines (level curves) and a point marker showing the \
+maximum sales point found in (a). Ensure all axes are appropriately labelled. \
+(Only a Code solution is required.)  ",
+ StyleBox["[5 marks]",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.630395946377358*^9, 3.630395954383842*^9}, {
+   3.630399795057693*^9, 3.630400019179974*^9}, {3.6304000692376537`*^9, 
+   3.6304001535208693`*^9}, {3.63067829614461*^9, 3.630678326278894*^9}, {
+   3.662044909937065*^9, 3.662045046258423*^9}, {3.6620453261638727`*^9, 
+   3.662045415409202*^9}, {3.66204591622348*^9, 3.662046019602119*^9}, {
+   3.662097914593377*^9, 3.662097915094658*^9}, {3.6933951627681437`*^9, 
+   3.693395509125024*^9}, {3.724578522716934*^9, 3.7245785937460423`*^9}, {
+   3.724579290394703*^9, 3.7245793052818193`*^9}, {3.724579443400236*^9, 
+   3.7245795223119392`*^9}, 3.724579613495357*^9, 3.882872731453197*^9, {
+   3.882873417523362*^9, 3.8828734246978207`*^9}, 3.915427794985511*^9, {
+   3.915427840047618*^9, 3.915427932189022*^9}, {3.915428021654381*^9, 
+   3.915428025073063*^9}, {3.915428847303521*^9, 3.915428851823999*^9}, {
+   3.915431205325975*^9, 3.91543146746113*^9}, {3.915431515741148*^9, 
+   3.9154315453246117`*^9}, 3.9154330617295227`*^9, {3.915447567675205*^9, 
+   3.915447583217115*^9}, 3.9154500525698977`*^9, 3.915450350188158*^9, {
+   3.91545038780872*^9, 3.915450466557694*^9}, {3.9154505114942837`*^9, 
+   3.915450513771452*^9}, {3.915452699797695*^9, 3.9154527052504177`*^9}, {
+   3.9154533154212637`*^9, 3.915453725621024*^9}, {3.91555134043125*^9, 
+   3.915551341638208*^9}, {3.91560093374547*^9, 
+   3.9156009483498793`*^9}},ExpressionUUID->"7e9f652d-4c1f-436b-89dc-\
+6d3a2c9d5388"],
+
+Cell[CellGroupData[{
+
+Cell["Exam Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915551319352785*^9, 
+  3.915551321084866*^9}},ExpressionUUID->"aca7163c-970d-4eb8-9445-\
+cde37297075a"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Text Cells",
+  FontWeight->"Bold"],
+ ", enter you answer below showing all your workings as you would in an \
+exam."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 
+  3.9154275789861383`*^9}},ExpressionUUID->"2e5eda95-4ffb-440e-b510-\
+d9a4a0ddb132"],
+
+Cell["a) ", "Text",
+ CellChangeTimes->{{3.915427980565889*^9, 3.9154279835612583`*^9}, {
+  3.915428027775633*^9, 3.9154280284489717`*^9}},
+ Background->RGBColor[
+  0.88, 1, 0.88],ExpressionUUID->"61025c50-18d8-4d2d-8bf1-17ec31d864cf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915427598960868*^9, 3.9154275995899143`*^9}, {3.915551348626809*^9, 
+  3.915551349754174*^9}},ExpressionUUID->"230b5a61-1a8c-487a-b23a-\
+70f75a0f0bb7"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Input",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["Code Cells",
+  FontWeight->"Bold"],
+ ", find the solution using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " code. Add more cells as required."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 3.915427641413836*^9}, {
+  3.915428074704742*^9, 
+  3.9154280825613194`*^9}},ExpressionUUID->"04a4bf8d-4951-4d22-91ff-\
+927300dc00b4"],
+
+Cell["a)", "Text",
+ CellChangeTimes->{{3.915428054263109*^9, 
+  3.915428054680464*^9}},ExpressionUUID->"28a03304-909c-4154-8dfa-\
+8432a7abf6d4"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.915428003409273*^9, 
+  3.9154280622027082`*^9}},ExpressionUUID->"2bb4de10-cdcf-4282-94b3-\
+5c744583b7e0"],
+
+Cell["b)", "Text",
+ CellChangeTimes->{{3.9154280592040367`*^9, 
+  3.91542805967557*^9}},ExpressionUUID->"980a9c70-e5a5-4c00-99a7-\
+89d16272599a"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.915428003409273*^9, 
+  3.915428064731934*^9}},ExpressionUUID->"239bf368-94f2-4c9e-b608-\
+3b9e931474e0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 3)", "Section",
+ CellChangeTimes->{{3.630395861685361*^9, 3.630395867371891*^9}, {
+   3.63039599197572*^9, 3.630395993334382*^9}, {3.630399739700796*^9, 
+   3.630399764239839*^9}, {3.630403769931408*^9, 3.630403777249455*^9}, {
+   3.630409139400776*^9, 3.630409139657216*^9}, 3.63067808317043*^9, 
+   3.630678153012776*^9, {3.915427484252184*^9, 3.915427485757098*^9}, {
+   3.915450040294567*^9, 3.915450040401857*^9}, {3.915450301804867*^9, 
+   3.915450301878861*^9}},ExpressionUUID->"82eb9f86-766d-4008-810f-\
+3ec5b72b8a66"],
+
+Cell[TextData[{
+ "\n",
+ StyleBox["[25 marks]",
+  FontWeight->"Bold"],
+ "\n\nAssume that the marginal cost function of a company is modelled by\n\n\t\
+ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"C", "(", "x", ")"}], "=", 
+    RowBox[{"x", "(", 
+     RowBox[{
+      SuperscriptBox["e", 
+       RowBox[{"-", "x"}]], "+", 
+      SuperscriptBox["e", 
+       RowBox[{
+        RowBox[{"-", "2"}], "x"}]]}], ")"}]}], TraditionalForm]],
+  ExpressionUUID->"47d6857e-6816-466c-967f-d63339872f10"],
+ ",\n\nwhere ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "74b62fbe-9d23-46c0-b5dc-92c013269905"],
+ " represents the number of products produced and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "63792fae-35ec-43f3-bd1f-509923fb990b"],
+ " is in millions of pounds.\n\na) Find the first three elements of the \
+Taylor series about ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "0", " "}], TraditionalForm]],ExpressionUUID->
+  "9d4132ed-39be-4cfa-a077-adce8d95831b"],
+ "of the marginal cost function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"C", "(", "x", ")"}], "."}], TraditionalForm]],ExpressionUUID->
+  "17ea3cc1-08eb-42cc-9373-82249f78f629"],
+ " What is the equation for the linearization of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"C", "(", "x", ")"}], " "}], TraditionalForm]],ExpressionUUID->
+  "7d24a092-f9d8-422c-b35b-575a8301da00"],
+ "about ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "0"}], TraditionalForm]],ExpressionUUID->
+  "6e4c0586-beab-427d-8a9c-23ec80c4580b"],
+ "? ",
+ StyleBox["[20 marks]",
+  FontWeight->"Bold"],
+ "\n\nb) In ",
+ StyleBox["Mathematica, ",
+  FontSlant->"Italic"],
+ "produce a single plot for values of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Element]", 
+    RowBox[{"[", 
+     RowBox[{"0", ",", "1"}], "]"}]}], TraditionalForm]],ExpressionUUID->
+  "2aad41af-a3c9-408c-8917-76a889ce7845"],
+ " showing:\n\t- the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "4dc2c118-2897-4e26-b687-cba6878533c2"],
+ " \n\t- the linearization ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "1f92821b-a2d6-411b-8bc5-3b6986bb48ab"],
+ " about 0\n\t- the 2nd-order Taylor series approximation to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "293dee93-ccc3-4da5-b829-acb1933f24a0"],
+ " around 0 found in part (a)\nInclude a suitable legend listing the three \
+plot lines and ensure the axes are appropriately labelled. \
+\[LineSeparator](Only a Code solution is required.) ",
+ StyleBox["[5 marks]",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.630395946377358*^9, 3.630395954383842*^9}, {
+   3.630399795057693*^9, 3.630400019179974*^9}, {3.6304000692376537`*^9, 
+   3.6304001535208693`*^9}, {3.63067829614461*^9, 3.630678326278894*^9}, {
+   3.662044909937065*^9, 3.662045046258423*^9}, {3.6620453261638727`*^9, 
+   3.662045415409202*^9}, {3.66204591622348*^9, 3.662046019602119*^9}, {
+   3.662097914593377*^9, 3.662097915094658*^9}, {3.6933951627681437`*^9, 
+   3.693395509125024*^9}, {3.724578522716934*^9, 3.7245785937460423`*^9}, {
+   3.724579290394703*^9, 3.7245793052818193`*^9}, {3.724579443400236*^9, 
+   3.7245795223119392`*^9}, 3.724579613495357*^9, 3.882872731453197*^9, {
+   3.882873417523362*^9, 3.8828734246978207`*^9}, 3.915427794985511*^9, {
+   3.915427840047618*^9, 3.915427932189022*^9}, {3.915428021654381*^9, 
+   3.915428025073063*^9}, {3.915428847303521*^9, 3.915428851823999*^9}, {
+   3.915431205325975*^9, 3.91543146746113*^9}, {3.915431515741148*^9, 
+   3.9154315453246117`*^9}, 3.9154330617295227`*^9, {3.915447567675205*^9, 
+   3.915447583217115*^9}, 3.9154500525698977`*^9, {3.915463124185093*^9, 
+   3.9154632541600733`*^9}, {3.915463294735372*^9, 3.915463356684759*^9}, {
+   3.915465984352458*^9, 3.915466383005321*^9}, {3.915466416491631*^9, 
+   3.91546650785957*^9}, {3.9154667023238783`*^9, 3.9154667155372562`*^9}, {
+   3.915466762342099*^9, 3.9154667659139013`*^9}, 3.915551356918914*^9, 
+   3.915552038507464*^9, {3.9156009596900177`*^9, 
+   3.915600995726139*^9}},ExpressionUUID->"ce19fa3a-0cd6-47a2-9494-\
+cb368594f193"],
+
+Cell[CellGroupData[{
+
+Cell["Exam Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915551319352785*^9, 
+  3.915551321084866*^9}},ExpressionUUID->"4823fc6b-7751-497b-be38-\
+0daae780a146"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Text Cells",
+  FontWeight->"Bold"],
+ ", enter you answer below showing all your workings as you would in an \
+exam."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 
+  3.9154275789861383`*^9}},ExpressionUUID->"73ac2fdd-e211-4d50-978a-\
+c149e0886fd2"],
+
+Cell["a)  ", "Text",
+ CellChangeTimes->{{3.915427980565889*^9, 3.9154279835612583`*^9}, {
+  3.915428027775633*^9, 3.9154280284489717`*^9}, {3.915463370241469*^9, 
+  3.915463557538081*^9}, {3.915463835302059*^9, 3.915464180325033*^9}, {
+  3.915464219186479*^9, 3.915464433814129*^9}, {3.915464561979417*^9, 
+  3.915464562752339*^9}},
+ Background->RGBColor[
+  0.88, 1, 0.88],ExpressionUUID->"cdfad371-f00a-4783-b358-de182c5c1499"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915427598960868*^9, 3.9154275995899143`*^9}, {3.915551363014188*^9, 
+  3.915551364103154*^9}},ExpressionUUID->"b78c3fbb-a0d7-4aea-9976-\
+54a8b1b7310d"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Input",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["Code Cells",
+  FontWeight->"Bold"],
+ ", find the solution using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " code. Add more cells as required."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 3.915427641413836*^9}, {
+  3.915428074704742*^9, 
+  3.9154280825613194`*^9}},ExpressionUUID->"2ba218f6-e942-4889-ae76-\
+35cf6f3913af"],
+
+Cell["a)", "Text",
+ CellChangeTimes->{{3.915428054263109*^9, 
+  3.915428054680464*^9}},ExpressionUUID->"876078bc-0ef2-4ccc-9bbc-\
+a0014d637bed"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.915428003409273*^9, 
+  3.9154280622027082`*^9}},ExpressionUUID->"4623ab76-43a1-4202-ab9f-\
+2a9cd0489df2"],
+
+Cell["b)", "Text",
+ CellChangeTimes->{{3.9154280592040367`*^9, 
+  3.91542805967557*^9}},ExpressionUUID->"22415d3d-7d13-4639-aa94-\
+14b76525210c"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.915428003409273*^9, 
+  3.915428064731934*^9}},ExpressionUUID->"ddd1e2a3-575f-49f6-940e-\
+be404e270119"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Question 4)", "Section",
+ CellChangeTimes->{{3.630395861685361*^9, 3.630395867371891*^9}, {
+   3.63039599197572*^9, 3.630395993334382*^9}, {3.630399739700796*^9, 
+   3.630399764239839*^9}, {3.630403769931408*^9, 3.630403777249455*^9}, {
+   3.630409139400776*^9, 3.630409139657216*^9}, 3.63067808317043*^9, 
+   3.630678153012776*^9, {3.915427484252184*^9, 3.915427485757098*^9}, {
+   3.915450040294567*^9, 3.915450040401857*^9}, {3.9154503095202637`*^9, 
+   3.9154503101423473`*^9}},ExpressionUUID->"97f6e080-260e-4887-9fc0-\
+db53b82b6ca5"],
+
+Cell[TextData[{
+ StyleBox["[25 marks]",
+  FontWeight->"Bold"],
+ "\n\nThe projected cumulative profit ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", " "}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f631d959-e1a9-4158-8f72-f62883bb4f90"],
+ "for a new product being launched is modelled by the function\n\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", "n", ")"}], "=", 
+    RowBox[{
+     RowBox[{"\[LeftBracketingBar]", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"n", "-", "10"}], ")"}], "2"], "-", "64"}], 
+      "\[RightBracketingBar]"}], "+", 
+     RowBox[{"7", "n"}], "-", "36", " "}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "00180554-c369-4d00-97eb-6d9518c13152"],
+ ",  where ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8ca46e86-951f-4b39-aa62-9bcf47a66b73"],
+ " represents total unit sales\n\t\nConsidering ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "\[Element]", 
+    RowBox[{"[", 
+     RowBox[{"0", ",", "20"}], "]"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e7222a8e-12db-4507-8124-6a0e8c6f1828"],
+ ", find and classify all the local and absolute minimum and maximum points \
+of cumulative profitability, providing for each ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1491a336-e20c-4595-872e-5ae3fad85019"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "n", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "039ab2fd-9704-4e9e-be0c-fbbc98f530bd"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.915543973014661*^9, 3.915544174305822*^9}, {
+  3.915544216465605*^9, 3.915544221172394*^9}, {3.915544282980031*^9, 
+  3.915544486347579*^9}, {3.915544535422922*^9, 3.915544617988338*^9}, {
+  3.9155458674894943`*^9, 3.9155458682013597`*^9}, {3.915547820131419*^9, 
+  3.915547831315587*^9}, {3.9155511245861*^9, 3.9155511254471827`*^9}, {
+  3.915601000956888*^9, 
+  3.915601006340086*^9}},ExpressionUUID->"298583b8-1757-42fa-826b-\
+ae72cebedb2e"],
+
+Cell[CellGroupData[{
+
+Cell["Exam Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915551319352785*^9, 
+  3.915551321084866*^9}},ExpressionUUID->"62c7d357-55b8-47e6-88f6-\
+7826bfc3476d"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Text Cells",
+  FontWeight->"Bold"],
+ ", enter you answer below showing all your workings as you would in an \
+exam."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 
+  3.9154275789861383`*^9}},ExpressionUUID->"fe234b10-7fa3-4dec-8d27-\
+51e979805da5"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.915427980565889*^9, 3.9154279835612583`*^9}, {
+  3.915428027775633*^9, 3.9154280284489717`*^9}, {3.915551171821185*^9, 
+  3.915551172423843*^9}},
+ Background->RGBColor[
+  0.88, 1, 0.88],ExpressionUUID->"1aac8a0c-c688-40c3-8ba0-72fb8efe8cee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code Answer", "Subsubsection",
+ CellChangeTimes->{{3.915427510032613*^9, 3.9154275398984327`*^9}, {
+  3.915427598960868*^9, 3.9154275995899143`*^9}, {3.9155513762725286`*^9, 
+  3.915551377379551*^9}},ExpressionUUID->"43db1a02-75aa-4862-a1a5-\
+a4c714eaf207"],
+
+Cell[TextData[{
+ "Using ",
+ StyleBox["Input",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["Code Cells",
+  FontWeight->"Bold"],
+ ", find the solution using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " code. Add more cells as required."
+}], "Text",
+ CellChangeTimes->{{3.9154275479546328`*^9, 3.915427641413836*^9}, {
+  3.915428074704742*^9, 
+  3.9154280825613194`*^9}},ExpressionUUID->"054e4092-2fab-4f7a-994c-\
+dede8d67f563"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.915428003409273*^9, 
+  3.9154280622027082`*^9}},ExpressionUUID->"80ee7d65-fd40-445a-85fe-\
+f058f70766e2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1028, 1200},
+WindowMargins->{{7, Automatic}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b1fdc2a1-d5cc-4209-978b-687214d91e88"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 315, 5, 123, "Title",ExpressionUUID->"44629f3d-e57c-4c04-a7f2-0438f45a1cb0"],
+Cell[898, 29, 1007, 19, 131, "Text",ExpressionUUID->"3f2ab1c4-62cf-4282-8069-2338ebb5d0ad"],
+Cell[1908, 50, 977, 18, 40, "Item",ExpressionUUID->"9886ea46-a1fc-4901-95d0-e9517e3a5750"],
+Cell[2888, 70, 1239, 21, 67, "Item",ExpressionUUID->"2a2a4bad-4e71-4df6-a87e-cefccc4971b9"],
+Cell[4130, 93, 1267, 20, 93, "Item",ExpressionUUID->"ff57b884-4ad4-4dc9-a527-b3af20133c10"],
+Cell[5400, 115, 1393, 24, 93, "Item",ExpressionUUID->"157cd19d-d6b7-40b6-834b-0f93dc3c9244"],
+Cell[6796, 141, 1358, 28, 67, "Item",ExpressionUUID->"71716d68-6d18-4a17-8505-a4a4fdf867fa"],
+Cell[8157, 171, 99, 1, 4, "PageBreak",ExpressionUUID->"83c8bfad-54b6-4a4c-862b-fb5d73766d05",
+ PageBreakBelow->True],
+Cell[CellGroupData[{
+Cell[8281, 176, 468, 7, 84, "Section",ExpressionUUID->"6bff2a9e-65bf-41a2-9ad4-fa0876802dd9"],
+Cell[8752, 185, 2861, 60, 395, "Text",ExpressionUUID->"d94b3f74-8f53-44df-b195-d4cd7558dd61"],
+Cell[CellGroupData[{
+Cell[11638, 249, 213, 4, 56, "Subsubsection",ExpressionUUID->"f2e3c1f2-ea64-4a8e-9122-f6481d4fac79"],
+Cell[11854, 255, 296, 9, 44, "Text",ExpressionUUID->"29d85c14-c376-455f-9b54-3fe026f01fce"],
+Cell[12153, 266, 234, 4, 64, "Text",ExpressionUUID->"210fdc69-5ed7-40f0-8e08-3e357d91266f"],
+Cell[12390, 272, 230, 4, 64, "Text",ExpressionUUID->"ca0a5e99-3925-4b68-b154-bb5b3f0a286e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12657, 281, 263, 4, 56, "Subsubsection",ExpressionUUID->"6416c9d0-045d-43e5-a1cf-aac1b64237af"],
+Cell[12923, 287, 433, 15, 44, "Text",ExpressionUUID->"e51b74c7-2993-493e-95a1-7c7d31cdb492"],
+Cell[13359, 304, 144, 3, 44, "Text",ExpressionUUID->"188a065b-a0d2-479e-98e4-deccbe6e5ca4"],
+Cell[13506, 309, 153, 3, 65, "Code",ExpressionUUID->"7a362ea0-c0b5-403e-8161-b41db0e70936"],
+Cell[13662, 314, 145, 3, 44, "Text",ExpressionUUID->"78b9a82f-18ac-4964-9bd5-05ef5bc3d590"],
+Cell[13810, 319, 151, 3, 65, "Code",ExpressionUUID->"07a6e6db-3106-4b70-b475-41163f96742e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14010, 328, 495, 8, 84, "Section",ExpressionUUID->"899fa80a-6de2-46e5-89d4-d337963d3629"],
+Cell[14508, 338, 3271, 73, 476, "Text",ExpressionUUID->"7e9f652d-4c1f-436b-89dc-6d3a2c9d5388"],
+Cell[CellGroupData[{
+Cell[17804, 415, 213, 4, 56, "Subsubsection",ExpressionUUID->"aca7163c-970d-4eb8-9445-cde37297075a"],
+Cell[18020, 421, 296, 9, 44, "Text",ExpressionUUID->"2e5eda95-4ffb-440e-b510-d9a4a0ddb132"],
+Cell[18319, 432, 234, 4, 64, "Text",ExpressionUUID->"61025c50-18d8-4d2d-8bf1-17ec31d864cf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18590, 441, 261, 4, 56, "Subsubsection",ExpressionUUID->"230b5a61-1a8c-487a-b23a-70f75a0f0bb7"],
+Cell[18854, 447, 433, 15, 44, "Text",ExpressionUUID->"04a4bf8d-4951-4d22-91ff-927300dc00b4"],
+Cell[19290, 464, 144, 3, 44, "Text",ExpressionUUID->"28a03304-909c-4154-8dfa-8432a7abf6d4"],
+Cell[19437, 469, 153, 3, 65, "Code",ExpressionUUID->"2bb4de10-cdcf-4282-94b3-5c744583b7e0"],
+Cell[19593, 474, 145, 3, 44, "Text",ExpressionUUID->"980a9c70-e5a5-4c00-99a7-89d16272599a"],
+Cell[19741, 479, 151, 3, 65, "Code",ExpressionUUID->"239bf368-94f2-4c9e-b608-3b9e931474e0"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19941, 488, 541, 8, 84, "Section",ExpressionUUID->"82eb9f86-766d-4008-810f-3ec5b72b8a66"],
+Cell[20485, 498, 4265, 105, 534, "Text",ExpressionUUID->"ce19fa3a-0cd6-47a2-9494-cb368594f193"],
+Cell[CellGroupData[{
+Cell[24775, 607, 213, 4, 56, "Subsubsection",ExpressionUUID->"4823fc6b-7751-497b-be38-0daae780a146"],
+Cell[24991, 613, 296, 9, 44, "Text",ExpressionUUID->"73ac2fdd-e211-4d50-978a-c149e0886fd2"],
+Cell[25290, 624, 428, 7, 64, "Text",ExpressionUUID->"cdfad371-f00a-4783-b358-de182c5c1499"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25755, 636, 261, 4, 56, "Subsubsection",ExpressionUUID->"b78c3fbb-a0d7-4aea-9976-54a8b1b7310d"],
+Cell[26019, 642, 433, 15, 44, "Text",ExpressionUUID->"2ba218f6-e942-4889-ae76-35cf6f3913af"],
+Cell[26455, 659, 144, 3, 44, "Text",ExpressionUUID->"876078bc-0ef2-4ccc-9bbc-a0014d637bed"],
+Cell[26602, 664, 153, 3, 65, "Code",ExpressionUUID->"4623ab76-43a1-4202-ab9f-2a9cd0489df2"],
+Cell[26758, 669, 145, 3, 44, "Text",ExpressionUUID->"22415d3d-7d13-4639-aa94-14b76525210c"],
+Cell[26906, 674, 151, 3, 65, "Code",ExpressionUUID->"ddd1e2a3-575f-49f6-940e-be404e270119"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27106, 683, 545, 8, 84, "Section",ExpressionUUID->"97f6e080-260e-4887-9fc0-db53b82b6ca5"],
+Cell[27654, 693, 2134, 58, 250, "Text",ExpressionUUID->"298583b8-1757-42fa-826b-ae72cebedb2e"],
+Cell[CellGroupData[{
+Cell[29813, 755, 213, 4, 56, "Subsubsection",ExpressionUUID->"62c7d357-55b8-47e6-88f6-7826bfc3476d"],
+Cell[30029, 761, 296, 9, 44, "Text",ExpressionUUID->"fe234b10-7fa3-4dec-8d27-51e979805da5"],
+Cell[30328, 772, 280, 5, 64, "Text",ExpressionUUID->"1aac8a0c-c688-40c3-8ba0-72fb8efe8cee"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30645, 782, 263, 4, 56, "Subsubsection",ExpressionUUID->"43db1a02-75aa-4862-a1a5-a4c714eaf207"],
+Cell[30911, 788, 433, 15, 44, "Text",ExpressionUUID->"054e4092-2fab-4f7a-994c-dede8d67f563"],
+Cell[31347, 805, 153, 3, 65, "Code",ExpressionUUID->"80ee7d65-fd40-445a-85fe-f058f70766e2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
