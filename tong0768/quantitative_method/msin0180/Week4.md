@@ -139,7 +139,7 @@ E(x, y) = f(x, y) - L(x, y)
 
 ---
 
-#### **第30页 | PDF MSINO180 Week 4 Lecture.nb**
+#### **第30页 | PDF MSIN0180 Week 4 Lecture.nb**
 
 ##### 多项式近似（Polynomial Approximations）
 首先考虑函数 \( f(x) = e^x \) 在点 \( x_0 = 0 \) 处的线性化：  
